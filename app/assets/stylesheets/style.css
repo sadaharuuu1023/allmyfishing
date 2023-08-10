@@ -321,3 +321,7 @@ a {
     width: 100%;
   }
 }
+
+.greeting__link{
+  text-decoration: underline;
+}
