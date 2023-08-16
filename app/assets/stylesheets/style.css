@@ -82,6 +82,12 @@ a {
   opacity: 0.5;
 }
 
+
+.greeting__link{
+  text-decoration: underline;
+  align-items: center;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
@@ -89,6 +95,7 @@ a {
 
 .form__text {
   width: 50%;
+  height: 170px;
 }
 
 .field{
@@ -118,6 +125,44 @@ a {
   cursor: pointer;
 }
 
+.post_logo {
+  height: 30px;
+  width: 35px;
+}
+
+
+.img-upload {
+  margin: 30px auto 25px;
+}
+
+.click-upload { 
+  display: block;
+  text-align: center;
+} 
+
+/* タイトル入力欄 */
+.tweet-title {
+  display: block;
+  margin: 5px auto 20px;
+}
+
+.items-text {
+  display: block;
+  width: 250px;
+  margin: 5px auto 20px;
+}
+
+/* 投稿ボタン */
+.sell-btn {
+  background-color: lightgray;
+  border: 1px solid;
+  display: block;
+  width: 100px;
+  margin: 20px auto 20px;
+  text-align: center;
+}
+
+
 /* メイン */
 
 .greeting{
@@ -129,6 +174,8 @@ a {
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
+  text-align: center;
+  color: #999;
 }
 .card__wrapper {
   display: flex;
@@ -322,6 +369,65 @@ a {
   }
 }
 
-.greeting__link{
-  text-decoration: underline;
+/* form.html */
+
+
+.items-sell-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
 }
+
+.items-sell-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.items-sell-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.items-sell-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* 共通 */
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+  margin: auto;
+}
+
+
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.items-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+.tweet-form {
+  font-size: 15px;
+  text-align: center;
+}
+
