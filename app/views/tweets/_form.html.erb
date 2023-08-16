@@ -1,0 +1,55 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('1.png' , size: '130x110') %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">情報を入力</h2>
+
+    <%= form_with model: @tweet , local: true do |f| %>
+    <%# 画像 %>
+    <div class="img-upload">
+    <label for=”id_img” >
+<span>ファイルを選択</span>
+<input id=”id_img” type=”file”>
+</label>
+      <%# <div class="weight-bold-text">
+        <h2 class="tweet-form">画像</h2>
+      </div> %>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"tweet-image" %>
+      </div>
+    </div>
+    <%# //画像 %>
+
+    <%# 投稿内容入力欄 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">タイトル</h2>
+      </div>
+      <%= f.text_area :title, class:"tweet-title", id:"tweet-title" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+            <h2 class="tweet-form">場所情報</h2>
+        </div>
+        <%= f.text_area :text_field, class:"items-text", id:"tweet-text_field", placeholder:"（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <div class="weight-bold-text">
+            <h2 class="tweet-form">タックル情報</h2>
+        </div>
+        <%= f.text_area :text_tackle, class:"items-text", id:"tweet-text_tackle", placeholder:"（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿" ,class:"sell-btn" %>
+    </div>
+    <div>
+    <%=link_to '戻る', root_path, class:"sell-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+
+</div>

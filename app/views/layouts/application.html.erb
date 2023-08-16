@@ -20,15 +20,16 @@
         </div>
         <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
-
+            <%# ユーザー名 %>
             <div class="greeting">
-        
-        <%= link_to (current_user.name),"/users/#{current_user.id}", class: :greeting__link%>
-      
-        </div> 
-
+            <%= link_to (current_user.name),"/users/#{current_user.id}", class: :greeting__link%>
+            </div> 
+            <%# ユーザーフォローアイコン %>
+            <%= link_to image_tag("follow.png", class: :post_logo), root_path %>
+            <%# 新規投稿アイコン %>
+             <%= link_to image_tag("posts.png", class: :post_logo), new_tweet_path %>
              <div class="nav__right"> 
-              <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+              <%= link_to image_tag("logout.png", class: :post_logo), destroy_user_session_path, data: { turbo_method: :delete } %>
              </div> 
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>

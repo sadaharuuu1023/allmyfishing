@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# README
 
-Things you may want to cover:
+## usersテーブル
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| email   | string | null: false, unique: true |
+| encrypted_password  | string | null: false |
+| name| string | null: false |
 
-* Ruby version
+### Association
+has_many :tweets
+has_many :follows
 
-* System dependencies
+## tweetsテーブル
+| title | string | null: false |
+| text_field | text | null: false |
+| text_tackle | text | null: false |
 
-* Configuration
+### Association
+belongs_to :users
 
-* Database creation
 
-* Database initialization
+## followsテーブル
+| follower_id | references | null: false, foreign_key: true |
+| followed_id | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
+belongs_to :users
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
