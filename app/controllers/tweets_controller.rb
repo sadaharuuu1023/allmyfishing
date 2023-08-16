@@ -11,6 +11,9 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
   end
 
+  def edit
+  end
+
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
@@ -20,8 +23,15 @@ class TweetsController < ApplicationController
     end
   end
 
+  def update
+    if @tweet.update(tweet_params)
+      redirect_to tweet_path(@tweet)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def show
-    @tweet = Tweet.find(params[:id])
   end
 
   def destroy
