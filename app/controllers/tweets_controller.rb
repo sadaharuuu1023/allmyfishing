@@ -20,6 +20,18 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def destroy
+    if @tweet.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
 end
 
 
@@ -30,7 +42,7 @@ private
   end
 
   def set_tweet
-    @tweet = tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
   end
 
 def move_to_index
