@@ -48,7 +48,7 @@ end
 private
 
   def tweet_params
-    params.require(:tweet).permit(:title, :text_field, :text_tackle, :image).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:title, :text_field, :text_water_depth, :text_terrain, :text_tide, :text_rod, :text_reel, :text_line, :text_leader, :text_lure, :text_color, :image).merge(user_id: current_user.id)
   end
 
   def set_tweet
