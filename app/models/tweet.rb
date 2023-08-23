@@ -4,5 +4,5 @@ class Tweet < ApplicationRecord
 
   validates :title, presence: true
   validates :text_field, presence: true
-  validates :text_tackle, presence: true
+
 end

@@ -45,7 +45,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_062949) do
     t.bigint "user_id"
     t.string "title"
     t.text "text_field"
-    t.text "text_tackle"
+    t.text "text_water_depth"
+    t.text "text_terrain"
+    t.text "text_tide"
+    t.text "text_rod"
+    t.text "text_reel"
+    t.text "text_line"
+    t.text "text_leader"
+    t.text "text_lure"
+    t.text "text_color"
     t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 

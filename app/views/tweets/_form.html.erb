@@ -28,17 +28,57 @@
         <h2 class="tweet-form">タイトル</h2>
       </div>
       <%= f.text_area :title, class:"tweet-title", id:"tweet-title" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-            <h2 class="tweet-form">場所情報</h2>
-        </div>
-        <%= f.text_area :text_field, class:"items-text", id:"tweet-text_field", placeholder:"（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
-        <div class="weight-bold-text">
-            <h2 class="tweet-form">タックル情報</h2>
-        </div>
-        <%= f.text_area :text_tackle, class:"items-text", id:"tweet-text_tackle", placeholder:"（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">釣り場</h2>
       </div>
-    </div>
+      <%= f.text_area :text_field, class:"tweet-title", id:"tweet-text_field" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">水深</h2>
+      </div>
+      <%= f.text_area :text_water_depth, class:"tweet-title", id:"tweet-text_water_depth" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">地形</h2>
+      </div>
+      <%= f.text_area :text_terrain, class:"tweet-title", id:"tweet-text_terrain" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">潮</h2>
+      </div>
+      <%= f.text_area :text_tide, class:"tweet-title", id:"tweet-text_tide" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">ロッド</h2>
+      </div>
+      <%= f.text_area :text_rod, class:"tweet-title", id:"tweet-text_rod" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">リール</h2>
+      </div>
+      <%= f.text_area :text_reel, class:"tweet-title", id:"tweet-text_reel" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">ライン</h2>
+      </div>
+      <%= f.text_area :text_line, class:"tweet-title", id:"tweet-text_line" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">リーダー</h2>
+      </div>
+      <%= f.text_area :text_leader, class:"tweet-title", id:"tweet-text_leader" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">ルアー</h2>
+      </div>
+      <%= f.text_area :text_lure, class:"tweet-title", id:"tweet-text_lure" %>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        <h2 class="tweet-form">カラー</h2>
+      </div>
+      <%= f.text_area :text_color, class:"tweet-title", id:"tweet-text_color" %>
+      
 
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
